@@ -16,7 +16,7 @@ docker run -d -p "80:80" solidnerd/rainloop
 docker-compose up
 ```
 
-If you [docker-compose](https://github.com/docker/compose) use the command above.
+use [docker-compose](https://github.com/docker/compose) .
 
 ## Save the Rainloop data persistent
 If you want the Rainloop data persistent than use the exposed Volume with a command like this:
