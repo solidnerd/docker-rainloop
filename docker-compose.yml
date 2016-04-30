@@ -1,0 +1,9 @@
+version: '2'
+services:
+  rainloop:
+    container_name: "rainloop"
+    image: solidnerd/rainloop
+    volumes:
+      - ./data:/var/www/rainloop/data
+    ports:
+      - "80:80"
