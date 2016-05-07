@@ -2,6 +2,8 @@
 
 A minimalistic docker version of [Rainloop Community Edition](http://www.rainloop.net/)
 
+## Version: [1.10](http://www.rainloop.net/changelog/)
+
 ## Quickstart
 
 To Start the container use the following command.
