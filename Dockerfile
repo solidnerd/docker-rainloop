@@ -26,11 +26,9 @@ RUN echo "@commuedge https://nl.alpinelinux.org/alpine/edge/community" >> /etc/a
     npm install && \
     gulp rainloop:start && \
     mv build/dist/releases/webmail/${RAINLOOP_VERSION}/src ${RAINLOOP_HOME} && \
-    rm -rf ${RAINLOOP_BUILD} && \
-#    npm uninstall -g gulp && \
+    npm uninstall -g gulp && \
     apk del --purge git nodejs && \
-    rm -fr /var/cache/apk/* && \
-    rm -fr /tmp/*
+    rm -fr ${RAINLOOP_BUILD} /root/.npm /tmp/* /var/cache/apk/*
 
 ADD httpd.conf /etc/apache2/httpd.conf
 
