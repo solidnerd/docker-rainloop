@@ -1,4 +1,5 @@
 # docker-rainloop
+[![](https://images.microbadger.com/badges/image/solidnerd/rainloop.svg)](http://microbadger.com/images/solidnerd/rainloop "Get your own image badge on microbadger.com")
 
 A minimalistic docker version of [Rainloop Community Edition](http://www.rainloop.net/)
 
