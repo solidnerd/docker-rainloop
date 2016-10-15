@@ -1,8 +1,7 @@
-image: docker:1.11.2
+image: docker:1.12.1
 
 stages:
 - build
-- test
 - prerelease
 - release
 
@@ -29,7 +28,6 @@ release-version:
     - docker rmi $CI_REGISTRY_IMAGE:$(cat VERSION)
   only:
     - master
-
 release-latest:
   stage: release
   script:
