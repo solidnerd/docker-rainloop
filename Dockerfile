@@ -2,16 +2,14 @@ FROM alpine:3.4
 MAINTAINER Niclas Mietz niclas@mietz.io
 
 ENV RAINLOOP_VERSION 1.10.4.183
-ENV RAINLOOP_BUILD /etc/rainloop
-ENV RAINLOOP_HOME /var/www/rainloop
-ENV RAINLOOP_EDITION  rainloop-community-latest.zip
-ENV RAINLOOP_DOWNLOAD http://repository.rainloop.net/v2/webmail/${RAINLOOP_EDITION}
-ENV RAINLOOP_CLONE_URL "https://github.com/RainLoop/rainloop-webmail.git"
 
-ENV REQUIRED_PACKAGES apache2 php5-apache2 php5-openssl php5-xml php5-json php5-iconv php5-curl php5-pdo_mysql php5-pdo_pgsql php5-pdo_sqlite php5-dom php5-zlib
+ENV RAINLOOP_BUILD="/etc/rainloop" \
+    RAINLOOP_HOME="/var/www/rainloop" \
+    RAINLOOP_CLONE_URL="https://github.com/RainLoop/rainloop-webmail.git" \
+    REQUIRED_PACKAGES="apache2 php5-apache2 php5-openssl php5-xml php5-json php5-iconv php5-curl php5-pdo_mysql php5-pdo_pgsql php5-pdo_sqlite php5-dom php5-zlib"
 
 RUN \
-  apk add -U $REQUIRED_PACKAGES && \
+  apk add --no-cache $REQUIRED_PACKAGES && \
   mkdir -p /run/apache2 && \
   rm -fr /var/cache/apk/* && \
   rm -fr /usr/bin/php
