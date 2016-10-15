@@ -3,7 +3,7 @@
 
 A minimalistic docker version of [Rainloop Community Edition](http://www.rainloop.net/)
 
-## Version: [1.10.3](http://www.rainloop.net/changelog/)
+## Version: [1.10.4.179](http://www.rainloop.net/changelog/)
 
 ## Quickstart
 
